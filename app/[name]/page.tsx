@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getPersonBySlug, getAllPeopleSlugs } from "../_lib/people";
 import BirthdayPageClient from "./BirthdayPageClient";
+import ScrollHorizontal from "@/app/_components/ScrollHorizontally";
 
 interface PageProps {
   params: Promise<{ name: string }>;
@@ -35,5 +36,9 @@ export default async function BirthdayPage({ params }: PageProps) {
     notFound();
   }
 
-  return <BirthdayPageClient person={person} />;
+  return (
+      <>
+        <BirthdayPageClient person={person} />
+      </>
+  );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllPeopleSlugs, people } from "./_lib/people";
+import ScrollHorizontal from "@/app/_components/ScrollHorizontally";
 
 export default function Home() {
   const slugs = getAllPeopleSlugs();
