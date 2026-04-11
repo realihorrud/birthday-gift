@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Birthday Celebrations 🎂",
-  description: "Special birthday celebration pages for amazing people",
+  title: "Happy Birthday, Natasha ✨",
+  description: "A handcrafted celebration page made especially for Natasha.",
 };
 
 export default function RootLayout({
