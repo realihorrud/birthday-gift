@@ -4,13 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 
-const nameLetters = "NATASHA".split("");
+const nameLetters = "Наташа".split("");
 
 interface GalleryPhoto {
   id: number;
   src: string;
   alt: string;
-  caption: string;
   desktopClass: string;
   imageClass: string;
 }
@@ -18,17 +17,15 @@ interface GalleryPhoto {
 const galleryPhotos: GalleryPhoto[] = [
   {
     id: 1,
-    src: "/natasha/natasha-1.jpg",
+    src: "/natasha/1.jpg",
     alt: "Natasha smiling at golden hour",
-    caption: "Golden hour glow",
     desktopClass: "md:col-span-4 md:row-span-2",
     imageClass: "saturate-110",
   },
   {
     id: 2,
-    src: "/natasha/2.jpg",
+    src: "/natasha/natasha-valik.JPG",
     alt: "Natasha laughing during a candid moment",
-    caption: "Unfiltered laughter",
     desktopClass: "md:col-span-5 md:row-span-3",
     imageClass: "contrast-110",
   },
@@ -36,7 +33,6 @@ const galleryPhotos: GalleryPhoto[] = [
     id: 3,
     src: "/natasha/3.jpg",
     alt: "Natasha in a cozy evening atmosphere",
-    caption: "Evening sparkle",
     desktopClass: "md:col-span-3 md:row-span-2",
     imageClass: "brightness-110",
   },
@@ -44,7 +40,6 @@ const galleryPhotos: GalleryPhoto[] = [
     id: 4,
     src: "/natasha/4.jpg",
     alt: "Natasha captured in a travel memory",
-    caption: "Adventure mood",
     desktopClass: "md:col-span-3 md:row-span-2",
     imageClass: "saturate-105",
   },
@@ -52,7 +47,6 @@ const galleryPhotos: GalleryPhoto[] = [
     id: 5,
     src: "/natasha/5.jpg",
     alt: "Natasha with a bright city backdrop",
-    caption: "City lights energy",
     desktopClass: "md:col-span-4 md:row-span-2",
     imageClass: "contrast-105",
   },
@@ -60,24 +54,21 @@ const galleryPhotos: GalleryPhoto[] = [
     id: 6,
     src: "/natasha/6.jpg",
     alt: "Natasha sharing a calm, peaceful moment",
-    caption: "Soft calm",
     desktopClass: "md:col-span-5 md:row-span-2",
     imageClass: "brightness-105",
   },
   {
     id: 7,
-    src: "/natasha/7.jpg",
+    src: "/natasha/8.jpeg",
     alt: "Natasha dressed up for a special day",
-    caption: "Main character day",
-    desktopClass: "md:col-span-7 md:row-span-2",
+    desktopClass: "md:col-span-7 md:row-span-4",
     imageClass: "saturate-110",
   },
   {
     id: 8,
-    src: "/natasha/8.jpg",
+    src: "/natasha/2.jpg",
     alt: "Natasha in a close-up portrait",
-    caption: "Signature smile",
-    desktopClass: "md:col-span-5 md:row-span-2",
+    desktopClass: "md:col-span-5 md:row-span-4",
     imageClass: "contrast-110",
   },
 ];
@@ -200,11 +191,6 @@ function PhotoFrame({
         }}
         className={`object-cover transition-transform duration-500 group-hover:scale-[1.04] ${photo.imageClass}`}
       />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#B45E7C]/78 via-[#D58AA6]/38 to-transparent px-3 pb-3 pt-8">
-        <p className="text-xs font-medium tracking-wide text-white/95 sm:text-sm">
-          {photo.caption}
-        </p>
-      </div>
     </motion.article>
   );
 }
@@ -338,7 +324,7 @@ export default function NatashaCelebration() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
             >
-              З Днем Народження, Наташ! 🥳
+              З Днем Народження! 🥳
             </motion.h1>
 
             <motion.div
@@ -374,9 +360,9 @@ export default function NatashaCelebration() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
             >
-              Tonight the whole sky is themed in your colors. This page is your
-              birthday stage: dreamy, bright, and absolutely impossible to
-              mistake for anyone else.
+              Привіт! Сьогодні твій день, і це мій подарунок для тебе. Я намагався якнайкраще зробити цю сторінку,
+              щоб додати ще одну приємність до цього дня, тому щиро вітаю з Днем Народження, бажаю лише всього найкращого в житті, і нехай ця сторінка буде
+              такою ж чудовою як і ти 🥳🎂
             </motion.p>
           </div>
 
@@ -412,8 +398,7 @@ export default function NatashaCelebration() {
               }
               transition={{ duration: 3.5, repeat: reduceMotion ? 0 : Infinity }}
             >
-              Chapter {new Date().getFullYear()}: still glowing, still iconic,
-              still Natasha.
+              27 років - це лише початок твого неймовірного росту та здійснення найзавітніших мрій ✨
             </motion.div>
           </motion.div>
         </section>
@@ -426,11 +411,11 @@ export default function NatashaCelebration() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6 }}
           >
-            Natasha photo constellation
+            Що за гарні люди 😍
           </motion.h2>
 
           <p className="mt-3 text-center text-xs text-[#9A5A71]/90 sm:text-sm">
-            Swipe on mobile • full collage on larger screens
+            Свайпай на мобайлі • насолоджуйся повним розміром колажу на десктопі
           </p>
 
           <div className="-mx-4 mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:hidden">
@@ -460,57 +445,6 @@ export default function NatashaCelebration() {
           </div>
         </section>
 
-        <section className="grid gap-8 lg:grid-cols-[1fr_1.05fr]">
-          <motion.article
-            className="rounded-[2rem] border border-[#FF9CB5]/70 bg-white/55 p-6 backdrop-blur-xl sm:p-8"
-            initial={{ opacity: 0, x: -18 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.45 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-2xl font-semibold text-[#8C3F58] sm:text-3xl">
-              Birthday note
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-[#8F5167]">
-              Natasha, you carry this rare mix of fire and softness. You make
-              people feel seen, you make plans better, and you make life feel
-              more cinematic. I hope this next year gives you bigger dreams,
-              louder laughter, and the kind of happiness that keeps surprising
-              you.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-[#8F5167]">
-              Keep being brave, playful, brilliant, and unmistakably yourself.
-              The world is luckier with you in it. Happy birthday, star girl.
-            </p>
-          </motion.article>
-
-          <motion.div
-            className="grid gap-4 sm:grid-cols-3"
-            initial={{ opacity: 0, x: 18 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
-            transition={{ duration: 0.65 }}
-          >
-            {memoryHighlights.map((memory, index) => (
-              <motion.article
-                key={memory.title}
-                className="rounded-3xl border border-[#FF9CB5]/65 bg-white/58 p-4 backdrop-blur-xl"
-                whileHover={
-                  reduceMotion ? undefined : { y: -10, rotate: index % 2 ? 1 : -1 }
-                }
-                transition={{ type: "spring", stiffness: 220, damping: 18 }}
-              >
-                <p className="text-sm font-semibold text-[#8C3F58]">
-                  {memory.title}
-                </p>
-                <p className="mt-2 text-xs leading-relaxed text-[#9A5A71]">
-                  {memory.text}
-                </p>
-              </motion.article>
-            ))}
-          </motion.div>
-        </section>
-
         <motion.footer
           className="text-center text-sm text-[#9A5A71]"
           initial={{ opacity: 0 }}
@@ -518,7 +452,7 @@ export default function NatashaCelebration() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          Made with love for Natasha • One page, one celebration, all heart.
+          Made with 💙 by Ihor Rud
         </motion.footer>
       </main>
     </div>
