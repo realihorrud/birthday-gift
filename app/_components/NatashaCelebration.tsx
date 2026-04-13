@@ -374,7 +374,7 @@ export default function NatashaCelebration() {
           >
             <div className="relative overflow-hidden rounded-[1.5rem]">
               <Image
-                src="/natasha-5.jpg"
+                src="/natasha/5.jpg"
                 alt="Natasha portrait"
                 width={720}
                 height={900}
