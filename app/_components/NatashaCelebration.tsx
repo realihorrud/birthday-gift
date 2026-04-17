@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 
-const nameLetters = "Наташа".split("");
+const nameLetters = "НАТАЛЯ".split("");
 
 interface GalleryPhoto {
   id: number;
@@ -73,21 +73,6 @@ const galleryPhotos: GalleryPhoto[] = [
   },
 ];
 
-const memoryHighlights = [
-  {
-    title: "Midnight talks",
-    text: "Conversations with you make hours feel like minutes.",
-  },
-  {
-    title: "Big-hearted chaos",
-    text: "You bring fun, warmth, and fearless honesty everywhere.",
-  },
-  {
-    title: "Future looks bright",
-    text: "This next chapter has your name all over it.",
-  },
-];
-
 const stars = Array.from({ length: 26 }, (_, index) => {
   const left = (index * 37) % 100;
   const top = (index * 53 + 11) % 100;
@@ -146,7 +131,7 @@ const openingConfetti: OpeningConfettiPiece[] = Array.from(
       rotate: -220 + pseudoRandom(index + 131) * 440,
       size: 6 + Math.floor(pseudoRandom(index + 151) * 8),
       delay: pseudoRandom(index + 181) * 0.28,
-      duration: 2.1 + pseudoRandom(index + 211) * 1.3,
+      duration: 5.1 + pseudoRandom(index + 211) * 1.3,
       color: confettiPalette[index % confettiPalette.length],
       shape: index % 3 === 0 ? "circle" : "rect",
     };
@@ -315,7 +300,7 @@ export default function NatashaCelebration() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              18 April
+              18 Квітня
             </motion.p>
 
             <motion.h1
@@ -360,9 +345,10 @@ export default function NatashaCelebration() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
             >
-              Привіт! Сьогодні твій день, і це мій подарунок для тебе. Я намагався якнайкраще зробити цю сторінку,
-              щоб додати ще одну приємність до цього дня, тому щиро вітаю з Днем Народження, бажаю лише всього найкращого в житті, і нехай ця сторінка буде
-              такою ж чудовою як і ти 🥳🎂
+              Привіт! Сьогодні особливий день - твій День Народження 🎉 І цей маленький подарунок від мене для тебе.
+              Я дуже старався зробити цю сторінку якнайкраще, щоб подарувати тобі ще більше теплих емоцій та посмішок у цей день 😊
+              Щиро вітаю тебе, бажаю безмежного щастя, міцного здоров’я, натхнення, любові та здійснення всього, про що мрієш 💖 
+              Нехай кожен твій день буде світлим, радісним і таким же чудовим, як ти сама 🥳🎂✨
             </motion.p>
           </div>
 
@@ -374,7 +360,7 @@ export default function NatashaCelebration() {
           >
             <div className="relative overflow-hidden rounded-[1.5rem]">
               <Image
-                src="/natasha/5.jpg"
+                src="/natasha/2.jpg"
                 alt="Natasha portrait"
                 width={720}
                 height={900}
@@ -398,7 +384,7 @@ export default function NatashaCelebration() {
               }
               transition={{ duration: 3.5, repeat: reduceMotion ? 0 : Infinity }}
             >
-              27 років - це лише початок твого неймовірного росту та здійснення найзавітніших мрій ✨
+              28 років - це лише початок твого неймовірного шляху, великих звершень і здійснення найзаповітніших мрій ✨💫
             </motion.div>
           </motion.div>
         </section>
@@ -411,11 +397,11 @@ export default function NatashaCelebration() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6 }}
           >
-            Що за гарні люди 😍
+            😍
           </motion.h2>
 
           <p className="mt-3 text-center text-xs text-[#9A5A71]/90 sm:text-sm">
-            Свайпай на мобайлі • насолоджуйся повним розміром колажу на десктопі
+            Свайпай праворуч ➡️ ➡️ ➡️️
           </p>
 
           <div className="-mx-4 mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:hidden">
@@ -452,7 +438,7 @@ export default function NatashaCelebration() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          Made with 💙 by Ihor Rud
+          Made with 💙 by Ihor Rud in 🇺🇦
         </motion.footer>
       </main>
     </div>
