@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 
-const nameLetters = "НАТАЛЯ".split("");
+const nameLetters = "НАТАША".split("");
 
 interface GalleryPhoto {
   id: number;
